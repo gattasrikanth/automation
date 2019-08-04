@@ -16,3 +16,13 @@ APPIUM_DEFAULT_PORT = '4723'
 
 DEVICE_TYPE_REAL = 'Real'
 DEVICE_TYPE_SIM = 'Simulator'
+
+# PlistBuddy is a tool to read and modify values inside of a plist structure.
+PLIST_BUDDY = '/usr/libexec/PlistBuddy'
+# The unique string that identifies the iOS app under test.
+IOS_BUNDLE_ID = 'CFBundleIdentifier'
+# The name of the iOS app under test i.e: Chrome Canary.
+IOS_APP_NAME = 'CFBundleDisplayName'
+# The version name of the iOS app under test.
+IOS_APP_VERSION = 'CFBundleVersion'
+
