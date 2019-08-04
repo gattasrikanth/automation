@@ -1,11 +1,16 @@
+#  Copyright (c) 2019
+#  Author: Srikanth Gatta
+
 '''
 This is the first file to start the with.
 The idea is to implement a framework that supports Mobile Automation
 using Appium.
 '''
 
+
 import argparse
 import constants
+import testsuite
 
 def parse_arguments():
   args_parser = argparse.ArgumentParser(description="Run Native Mobile Apps")
@@ -23,12 +28,14 @@ def parse_arguments():
                            default=constants.APPIUM_DEFAULT_PORT,
                            help='Port to run appium server on')
   args = args_parser.parse_args()
+  return args
 
 def main(passed_args=None):
   '''This will be the first function that gets called.
   The goal here is to read all the arguments that are passed to the script.
   '''
-  parse_arguments()
+  args = parse_arguments()
+  testsuite.execute_tests(args)
 
 if __name__ == '__main__':
   main()
