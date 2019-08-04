@@ -5,18 +5,22 @@ using Appium.
 '''
 
 import argparse
+import constants
 
 def parse_arguments():
   args_parser = argparse.ArgumentParser(description="Run Native Mobile Apps")
   args_parser.add_argument('-p', '--platform',
-                           choices=['Android', 'iOS'],
+                           choices=[constants.ANDROID, constants.IOS],
                            help='Choose platform to run against')
   args_parser.add_argument('-d', '--device',
-                           choices=['Simulator', 'Real'],
+                           choices=[constants.DEVICE_TYPE_REAL,
+                                    constants.DEVICE_TYPE_SIM],
                            help='Choose platform to run against')
-  args_parser.add_argument('-host', '--appium-host', default='127.0.0.1',
+  args_parser.add_argument('-host', '--appium-host',
+                           default=constants.APPIUM_DEFAULT_HOST,
                            help='Host addresses to run appium port on.')
-  args_parser.add_argument('-port', '--appium-port', default=4723,
+  args_parser.add_argument('-port', '--appium-port',
+                           default=constants.APPIUM_DEFAULT_PORT,
                            help='Port to run appium server on')
   args = args_parser.parse_args()
 
