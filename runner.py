@@ -27,6 +27,7 @@ def parse_arguments():
   args_parser.add_argument('-port', '--appium-port',
                            default=constants.APPIUM_DEFAULT_PORT,
                            help='Port to run appium server on')
+  args_parser.add_argument('-app', '--app_path', help='Full path of the app to be installed on the device.')
   args = args_parser.parse_args()
   return args
 
