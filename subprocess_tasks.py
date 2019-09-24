@@ -12,3 +12,6 @@ def execute_process(command):
 def plist_buddy(app_path, info_identifier):
   return [constants.PLIST_BUDDY, '-c', 'Print %s' % info_identifier,
           '%s/Info.plist' % app_path].strip()
+
+def check_output(mylist):
+  print(list)

@@ -2,7 +2,7 @@
 #  Author: Srikanth Gatta
 
 import constants
-import subprocess
+import subprocess_tasks
 
 def GetIOSAppInfomation(app_path):
   '''
@@ -11,6 +11,6 @@ def GetIOSAppInfomation(app_path):
   :param app_path:
   :return:
   '''
-  bundle_id = subprocess.execute_process(
-                        subprocess.plist_buddy(app_path,
-                                               constants.IOS_BUNDLE_ID))
+  bundle_id = subprocess_tasks.execute_process(
+                        subprocess_tasks.plist_buddy(app_path,
+                                                     constants.IOS_BUNDLE_ID))
